@@ -37,8 +37,9 @@ pm2 start start.js
 Witness SingleAddress --------------> 
 
 #
+#
 
-##接口说明
+## 接口说明
 接口协议：rpc
 
 [rpc示例文档](https://github.com/dagxio/Bsure-api-wal)
@@ -70,7 +71,7 @@ Witness SingleAddress -------------->
 }
 ```
 
-#####查询某个收款地址历史
+##### 查询某个收款地址历史
 `参数address为商品地址`
 ```json
 {"jsonrpc":"2.0","id":1,"method":"listtransactions","params":{"address": "VXA5Q27TPFZAO4DGKRR3W2D62YIM7GPD"}}
@@ -99,7 +100,7 @@ Witness SingleAddress -------------->
 }
 ```
 
-#####生成地址
+##### 生成地址
 ```json
 {"jsonrpc":"2.0","id":1,"method":"getnewaddress","params":[]}
 ```
@@ -124,7 +125,7 @@ Witness SingleAddress -------------->
     "id": 1
 }
 ```
-#####生成付款码
+##### 生成付款码
 `第一个参数为商品地址，第二个参数为商品金额`
 ```json
 {"jsonrpc":"2.0","id":1,"method":"getpaycode","params":[ "VXA5Q27TPFZAO4DGKRR3W2D62YIM7GPD",100]}
@@ -137,13 +138,13 @@ Witness SingleAddress -------------->
     "id": 1
 }
 ```
-####充值后转币
-#####1.转云牛币
+#### 充值后转币
+##### 1.转云牛币
 `第一个参数为用户地址，第二个参数为金额，第三个参数为资产`
 ```json
 {"jsonrpc":"2.0","id":1,"method":"sendtoaddress","params":["LDLIJOWMGJVLPCVXKZ6KP7JILQHYVEI6",100,"jH12XQGk0JJxYAO7j/lK0jrRjKVuEFc9mfTUc14mx1g="]}
 ```
-#####2.转base资产(用于支付时的手续费，每笔交易大概1000左右，首次转入数量和后期不足可领取需java端限制)
+##### 2.转base资产(用于支付时的手续费，每笔交易大概1000左右，首次转入数量和后期不足可领取需java端限制)
 ```只传2个参数即可 同上```
 ```json
 {"jsonrpc":"2.0","id":1,"method":"sendtoaddress","params":["LDLIJOWMGJVLPCVXKZ6KP7JILQHYVEI6",100]}
